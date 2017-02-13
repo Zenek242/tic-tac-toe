@@ -29,6 +29,7 @@ void Game::update()
 void Game::render()
 {
 	m_window.clear();
+	m_window.draw(m_text);
 	m_window.draw(m_board);
 	m_window.display();
 }
@@ -36,10 +37,13 @@ void Game::render()
 Game::Game() :
 	m_font(),
 	m_board(m_font),
-	m_window(sf::VideoMode(300, 360), "Tic Tac Toe", sf::Style::Close)
+	m_turn(Turn::O),
+	m_text("Next turn: X", m_font, 30),
+	m_window(sf::VideoMode(320, 360), "Tic Tac Toe", sf::Style::Close)
 {
 	m_font.loadFromFile("Assets/consolab.ttf");
-	m_board.setPosition(0.f, 60.f);
+	m_board.setPosition(10.f, 50.f);
+	m_text.setPosition(10.f, 5.f);
 	m_window.setFramerateLimit(60);
 	m_window.setKeyRepeatEnabled(false);
 	m_window.setVerticalSyncEnabled(true);
