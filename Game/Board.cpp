@@ -18,10 +18,16 @@ Board::Board(sf::Font & font)
 		}
 }
 
-void Board::handleClick(float x, float y)
+void Board::handleClick(int x, int y)
 {
-	x -= getPosition().x;
-	y -= getPosition().y;
+	x -= (int)getPosition().x;
+	y -= (int)getPosition().y;
+
+	int i = x / 100;
+	int j = y / 100;
+
+	if (!m_squares[j][i].getState())
+		m_squares[j][i].setState(Square::State::X);
 }
 
 sf::Vector2f Board::getSize() const

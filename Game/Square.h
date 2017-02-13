@@ -29,4 +29,5 @@ public:
 	Square();
 	void setFont(sf::Font & font);
 	void setState(State state);
+	State getState() const { return m_state; }
 };
