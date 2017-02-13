@@ -1,7 +1,7 @@
-# tic-tac-toe
+# Tic Tac Toe
 Tic-Tac-Toe game in C++ using SFML
 
-# Setup
+## Setup
 1. Build codebase.
 2. Assets folder should be placed in .exe directory.
 3. For the Debug build `openall32.dll`, `sfml-system-2-d.dll`, `sfml-window-2-d.dll`, `sfml-graphics-2-d.dll`, `sfml-audio-2-d.dll`,
