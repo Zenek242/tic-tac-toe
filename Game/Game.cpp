@@ -40,6 +40,9 @@ Game::Game() :
 {
 	m_font.loadFromFile("Assets/consolab.ttf");
 	m_board.setPosition(0.f, 60.f);
+	m_window.setFramerateLimit(60);
+	m_window.setKeyRepeatEnabled(false);
+	m_window.setVerticalSyncEnabled(true);
 }
 
 void Game::run()

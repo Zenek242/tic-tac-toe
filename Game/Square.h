@@ -27,7 +27,7 @@ private:
 	void update();
 public:
 	Square();
-	void setFont(sf::Font & font);
+	void setFont(sf::Font & font) { m_symbol.setFont(font); }
 	void setState(State state);
 	State getState() const { return m_state; }
 };

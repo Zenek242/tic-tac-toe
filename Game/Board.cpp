@@ -29,8 +29,3 @@ void Board::handleClick(int x, int y)
 	if (!m_squares[j][i].getState())
 		m_squares[j][i].setState(Square::State::X);
 }
-
-sf::Vector2f Board::getSize() const
-{
-	return sf::Vector2f(3 * 100, 3 * 100);
-}

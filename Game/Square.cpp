@@ -21,11 +21,6 @@ Square::Square() :
 	m_symbol.setPosition(20, -20);
 }
 
-void Square::setFont(sf::Font & font)
-{
-	m_symbol.setFont(font);
-}
-
 void Square::setState(State state)
 {
 	m_state = state;

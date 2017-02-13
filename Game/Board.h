@@ -19,5 +19,5 @@ private:
 public:
 	explicit Board(sf::Font & font);
 	void handleClick(int x, int y);
-	sf::Vector2f getSize() const;
+	sf::Vector2f getSize() const { return sf::Vector2f(3 * 100, 3 * 100); }
 };
