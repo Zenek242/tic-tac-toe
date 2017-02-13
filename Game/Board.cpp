@@ -8,9 +8,12 @@ void Board::draw(sf::RenderTarget & target, sf::RenderStates states) const
 			target.draw(m_squares[i][j], states);
 }
 
-Board::Board()
+Board::Board(sf::Font & font)
 {
 	for (int i = 0; i < 3; ++i)
 		for (int j = 0; j < 3; ++j)
+		{
 			m_squares[i][j].setPosition(j * 100.f, i * 100.f);
+			m_squares[i][j].setFont(font);
+		}
 }

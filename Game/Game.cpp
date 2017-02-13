@@ -27,9 +27,11 @@ void Game::render()
 }
 
 Game::Game() :
-	m_window(sf::VideoMode(300, 360), "Tic Tac Toe", sf::Style::Close),
-	m_board()
+	m_font(),
+	m_board(m_font),
+	m_window(sf::VideoMode(300, 360), "Tic Tac Toe", sf::Style::Close)
 {
+	m_font.loadFromFile("Assets/consolab.ttf");
 	m_board.setPosition(0.f, 60.f);
 }
 

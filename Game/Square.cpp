@@ -4,15 +4,46 @@ void Square::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
 	states.transform *=  getTransform();
 	target.draw(m_box, states);
+	target.draw(m_symbol, states);
 }
 
-Square::Square()
+Square::Square() :
+	m_box(sf::Vector2f(98.f, 98.f)),
+	m_state(State::None),
+	m_symbol()
 {
-	m_box.setSize(sf::Vector2f(98.f, 98.f));
 	m_box.setPosition(1.f, 1.f);
 	m_box.setFillColor(sf::Color::Black);
 	m_box.setOutlineColor(sf::Color::White);
 	m_box.setOutlineThickness(1.f);
+	m_symbol.setString("");
+	m_symbol.setCharacterSize(100);
+	m_symbol.setPosition(20, -20);
+}
 
-	m_state = State::None;
+void Square::setFont(sf::Font & font)
+{
+	m_symbol.setFont(font);
+}
+
+void Square::setState(State state)
+{
+	m_state = state;
+	update();
+}
+
+void Square::update()
+{
+	switch (m_state)
+	{
+	case State::None:
+		m_symbol.setString("");
+		break;
+	case State::O:
+		m_symbol.setString("O");
+		break;
+	case State::X:
+		m_symbol.setString("X");
+		break;
+	}
 }

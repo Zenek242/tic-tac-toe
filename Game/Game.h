@@ -2,12 +2,14 @@
 #include "Board.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
+#include <SFML/Graphics/Font.hpp>
 
 class Game
 {
 private:
-	sf::RenderWindow m_window;
+	sf::Font m_font;
 	Board m_board;
+	sf::RenderWindow m_window;
 
 	void processEvents();
 	void update();

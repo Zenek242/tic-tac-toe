@@ -3,6 +3,7 @@
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/Font.hpp>
 #include "Square.h"
 #include <array>
 
@@ -16,5 +17,5 @@ private:
 
 	void draw(sf::RenderTarget & target, sf::RenderStates states) const;
 public:
-	Board();
+	explicit Board(sf::Font & font);
 };
