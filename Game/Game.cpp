@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <iostream>
 
 void Game::processEvents()
 {
@@ -9,6 +10,12 @@ void Game::processEvents()
 		{
 		case sf::Event::Closed:
 			m_window.close();
+			break;
+		case sf::Event::MouseButtonPressed:
+			if (e.mouseButton.button == sf::Mouse::Left)
+				if (e.mouseButton.x > m_board.getPosition().x && e.mouseButton.x < m_board.getPosition().x + m_board.getSize().x)
+					if (e.mouseButton.y > m_board.getPosition().y && e.mouseButton.y < m_board.getPosition().y + m_board.getSize().y)
+						m_board.handleClick(e.mouseButton.x, e.mouseButton.y);
 			break;
 		}
 	}

@@ -17,3 +17,14 @@ Board::Board(sf::Font & font)
 			m_squares[i][j].setFont(font);
 		}
 }
+
+void Board::handleClick(float x, float y)
+{
+	x -= getPosition().x;
+	y -= getPosition().y;
+}
+
+sf::Vector2f Board::getSize() const
+{
+	return sf::Vector2f(3 * 100, 3 * 100);
+}

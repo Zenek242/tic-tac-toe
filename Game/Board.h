@@ -18,4 +18,6 @@ private:
 	void draw(sf::RenderTarget & target, sf::RenderStates states) const;
 public:
 	explicit Board(sf::Font & font);
+	void handleClick(float x, float y);
+	sf::Vector2f getSize() const;
 };
