@@ -1,0 +1,12 @@
+# Visual Studio files
+*.sln
+*.vcxproj
+*.user
+*.filters
+*.suo
+*.db
+*.opendb
+
+# Build folders
+Debug
+Release
