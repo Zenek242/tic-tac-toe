@@ -19,6 +19,7 @@ public:
 	};
 private:
 	sf::RectangleShape m_box;
+	State m_state;
 
 	void draw(sf::RenderTarget & target, sf::RenderStates states) const;
 public:

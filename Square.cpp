@@ -13,4 +13,6 @@ Square::Square()
 	m_box.setFillColor(sf::Color::Black);
 	m_box.setOutlineColor(sf::Color::White);
 	m_box.setOutlineThickness(1.f);
+
+	m_state = State::None;
 }
